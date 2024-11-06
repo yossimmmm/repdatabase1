@@ -40,10 +40,10 @@ int dequeue(Queue* q) {
     return value;
 }
 
-bool IsEmpty(Queue* q) {
-    return q->count == 0;
+bool isEmpty(Queue* s) {
+    return s->count == 0;
 }
 
-bool isFull(Queue* q) {
-    return q->count == q->size;
+bool isFull(Queue* s) {
+    return s->count == s->size;
 }

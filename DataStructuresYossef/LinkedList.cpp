@@ -1,16 +1,18 @@
 #include "LinkedList.h"
 
-void AddNum(int* PosNum, int size, int value) {
-	for (int i = 0; i < size; i++) {
-		if (PosNum[i] = 0) {
-			PosNum[i] = value;
-			return;
-		}
-	}
-	std::cerr << "Array is full. Cannot add number." << std::endl;
+void LinkedList::addToHead(int value) {
+	Node* newNode = new Node(value);
+	newNode->next = head;
+	head = newNode;
 }
-void RemoveNum(int* PosNum, int size) {
-	for (int i = 0; i < size; i++) {
-		if (PosNum[i]);
+
+void LinkedList::removeFromHead() {
+	if (head != nullptr) {
+		Node* temp = head;
+		head = head->next;
+		delete temp;
+	}
+	else {
+		std::cout << "The list is already empty." << std::endl;
 	}
 }

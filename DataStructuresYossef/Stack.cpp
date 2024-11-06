@@ -25,6 +25,10 @@ void cleanStack(Stack* s) {
 	}
 }
 
+bool isEmpty(Stack* s) {
+	return s->list.head == nullptr;  
+}
+
 bool isFull(Stack* s) {
 	return false; // the stack has no limit
 }

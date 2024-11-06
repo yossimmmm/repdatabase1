@@ -3,16 +3,29 @@
 
 #include <iostream>
 
-typedef struct LinkedList
-{
-	int size = 10; // default size
-	int* PosNum = new int[size];
+struct Node {
+	int data;
+	Node* next;
 
+	Node(int value) {
+		data = value;
+		next = nullptr;
+	}
+};
 
-} LinkedList;
+struct LinkedList {
+	Node* head;
 
-void AddNum(int* PosNum, int value);
-void RemoveNum(int* PosNum);
+	LinkedList() {
+		head = nullptr;
+	}
+
+	void addToHead(int value);
+
+	void removeFromHead();
+
+	
+};
 
 
 #endif
